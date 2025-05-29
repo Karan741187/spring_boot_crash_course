@@ -30,7 +30,7 @@ jobs:
         run: |
           JAR_NAME="spring_boot_crash_course-0.0.1-SNAPSHOT.jar"
           LOCAL_JAR_PATH="build/libs/$JAR_NAME"
-          REMOTE_SERVER="admin@91.108.110.250"
+          REMOTE_SERVER="masteradmin@91.108.110.250"
           REMOTE_JAR_DIR="/opt/notes"
 
           rsync -avz -e "ssh" $LOCAL_JAR_PATH $REMOTE_SERVER:$REMOTE_JAR_DIR/$JAR_NAME
