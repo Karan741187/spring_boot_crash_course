@@ -33,7 +33,7 @@ jobs:
           REMOTE_SERVER="masteradmin@91.108.110.250"
           REMOTE_JAR_DIR="/opt/notes"
 
-          rsync -avz --exclude='/*/.local' -e "ssh" $LOCAL_JAR_PATH $REMOTE_SERVER:$REMOTE_JAR_DIR/$JAR_NAME
+          rsync -avz  -e "ssh" $LOCAL_JAR_PATH $REMOTE_SERVER:$REMOTE_JAR_DIR/$JAR_NAME
 
           ssh $REMOTE_SERVER << EOF
             mv $REMOTE_JAR_DIR/$JAR_NAME $REMOTE_JAR_DIR/notes.jar
